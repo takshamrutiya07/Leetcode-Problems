@@ -4,7 +4,7 @@ int main()
 {
     vector<int>v={1,2,3};
     int size=v.size();
-    int diff=0,count;
+    int diff=0;
     sort(v.begin(),v.end());
     for(int i=0;i<size-1;i++)
     {
