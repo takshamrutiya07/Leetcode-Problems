@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 class Solution {
 public:
     vector<vector<int>> flipAndInvertImage(vector<vector<int>>& image) {
@@ -21,11 +22,8 @@ public:
         return image;
     }
 };
-
 int main() {
     Solution s;
-    vector<vector<int>>image={{1,0,0},{0,0,1},{1,0,0}};
-    vector<vector<int>>ans;
-    ans=s.flipAndInvertImage(image);
+    vector<vector<int>>image={{1,1,0},{1,0,1}};
     return 0;
 }
