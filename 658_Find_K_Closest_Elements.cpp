@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+class Solution {
+public:
+    vector<int> findClosestElements(vector<int>& arr, int k, int x) {
+        int left = 0;
+        int right = arr.size() - k;
+
+        while (left < right) {
+            int mid = (left + right) / 2;
+
+            if (x - arr[mid] > arr[mid + k] - x) {
+                left = mid + 1;
+            }
+            else {
+                right = mid;
+            }
+        }
+        vector<int> ans;
+        for (int i = left; i < left + k; i++) {
+            ans.push_back(arr[i]);
+        }
+        return ans;
+    }
+};
+
+int main() {
+    Solution s;
+    vector<int>arr = {1,2,3,4,5};
+    int k = 4;
+    int x = 3;
+    vector<int>ans;
+    ans = s.findClosestElements(arr,k,x);
+    return 0;
+}
